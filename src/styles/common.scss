@@ -1,0 +1,28 @@
+@import "clear";
+
+.m-header {
+    background: #190a55;
+}
+
+.m-container-sh {
+    width: 100%;
+    padding: 0 60px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.m-menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    li {
+        margin-right: 30px;
+    }
+}
