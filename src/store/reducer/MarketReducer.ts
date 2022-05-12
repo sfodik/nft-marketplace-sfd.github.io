@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import MarketReducer from "./MarketReducer";
+import MarketReducer from "./index";
 
 const reducers = combineReducers({
   Test: MarketReducer

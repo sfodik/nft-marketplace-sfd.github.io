@@ -9,7 +9,7 @@ import {
   Link
 } from "react-router-dom";
 
-import Home from './components/homepage/Homepage';
+import HomePage from './components/homepage/Homepage';
 import Activity from './components/activity/Activity';
 import Catalog from './components/catalog/Catalog';
 
@@ -48,7 +48,7 @@ function App() {
             </div>
 
             <Routes>
-              <Route path="/" element={<Home />} /> 
+              <Route path="/" element={<HomePage />} /> 
               <Route path="/catalog" element={<Catalog/>} />
               <Route path="/activity" element={<Activity/>} />
             </Routes>

@@ -1,4 +1,4 @@
-function Activity() {
+const Activity = () => {
     return (
       <div className="m-container">
         <h2>Activity</h2>
