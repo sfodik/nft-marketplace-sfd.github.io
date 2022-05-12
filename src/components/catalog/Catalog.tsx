@@ -1,4 +1,4 @@
-function Catalog() {
+const Catalog = () => {
     return (
       <div className="m-container">
         <h2>Catalog</h2>
