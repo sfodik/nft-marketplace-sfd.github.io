@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import './styles/common.scss';
 
@@ -6,9 +6,9 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 
+import Header from './components/common/Header';
 import HomePage from './components/homepage/Homepage';
 import Activity from './components/activity/Activity';
 import Catalog from './components/catalog/Catalog';
@@ -28,24 +28,8 @@ function App() {
     <div className="App">
       <div className='header'>
         <Router>
+          <Header/>
           <main>
-            <div className='m-header'>
-              <div className='m-container-sh'>
-                <div className='m-l-s-inner'>
-                  <div className='m-logo'>
-                    <img src="" alt="" />
-                  </div>
-                  <div className='m-search'>
-                    <input type="text" />
-                  </div>
-                </div>
-                <ul className='m-menu'>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/catalog">Catalog</Link></li>
-                  <li><Link to="/activity">Activity</Link></li>
-                </ul>
-              </div>
-            </div>
 
             <Routes>
               <Route path="/" element={<HomePage />} /> 
