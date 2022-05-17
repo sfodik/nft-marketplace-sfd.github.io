@@ -1,14 +1,7 @@
 import { useSelector } from "react-redux";
 
-export interface CardsProps {
-  data?: { id: number }
-}
-
-const HomePage = (props: CardsProps) => {
-
+export interface HomeProps {} const HomePage = (props:HomeProps) => {
     const data = useSelector((state) => state)
-
-    console.log(data)
 
     return (
       <div className="m-container">

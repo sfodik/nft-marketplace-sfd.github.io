@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import './App.css';
 import './styles/common.scss';
 
@@ -15,8 +15,9 @@ import Catalog from './components/catalog/Catalog';
 
 import { useDispatch } from 'react-redux';
 import { getMarket } from './store/actions/actions';
+import { ROUTES } from '../src/Routes';
 
-function App() {
+const App = (props:any) => {
 
   const dispatch = useDispatch();
 
@@ -33,8 +34,8 @@ function App() {
 
             <Routes>
               <Route path="/" element={<HomePage />} /> 
-              <Route path="/catalog" element={<Catalog/>} />
-              <Route path="/activity" element={<Activity/>} />
+              <Route path={ROUTES.CATALOG_PATH} element={<Catalog/>} />
+              <Route path={ROUTES.ACTIVITY_PATH} element={<Activity/>} />
             </Routes>
           </main>
         </Router>

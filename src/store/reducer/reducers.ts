@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import MarketReducer from "./index";
+import MarketReducer from "./MerketReducer";
 
 const reducers = combineReducers({
-  Test: MarketReducer
+  market: MarketReducer
 });
 
 export default reducers;
