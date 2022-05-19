@@ -8,7 +8,6 @@ export interface HomeProps {} const HomePage = (props:HomeProps) => {
       <li>{nftCard.id}</li>
     );
 
-    console.log(data)
     return (
       <div className="m-container">
         <h2>HomePage</h2>
