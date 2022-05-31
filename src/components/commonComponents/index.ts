@@ -12,6 +12,11 @@ const Container = styled.div`
 const Card = styled.div`
     width: 20%;
     margin-right: 60px;
+    display: block;
+    padding: 20px;
+    img {
+        max-width: 100%;
+    }
 `;
 
 export { Container, Card };
