@@ -3,17 +3,10 @@ import { ROUTES } from '../../Routes';
 
 import styled from 'styled-components';
 
+import { Container } from "../commonComponents";
+
 const HeaderInner = styled.div`
     background: #190a55;
-`;
-
-const Container = styled.div`
-    width: 100%;
-    padding: 0 60px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
 `;
 
 const Menu = styled.div`

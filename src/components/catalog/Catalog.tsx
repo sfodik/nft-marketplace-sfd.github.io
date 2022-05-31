@@ -1,7 +1,11 @@
+import { Container } from "../commonComponents"
+
 const Catalog = () => {
     return (
       <div className="m-container">
-        <h2>Catalog</h2>
+          <Container>
+            <h2>Catalog</h2>
+          </Container>
       </div>
     );
   }

@@ -25,7 +25,7 @@ const App = (props:any) => {
   }, [])
 
   return (
-    <div className="App">
+    <div>
       <div className='header'>
         <Router>
           <Header/>
@@ -38,9 +38,6 @@ const App = (props:any) => {
             </Routes>
           </main>
         </Router>
-      </div>
-      <div className='m-sd'>
-
       </div>
     </div>
   );

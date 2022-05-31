@@ -1,19 +1,32 @@
-import { useSelector } from "react-redux";
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+
+import { Container, Card } from "../commonComponents";
 
 export interface HomeProps {} const HomePage = (props:HomeProps) => {
-
     const data:any = useSelector((state) => state);
 
-    const nftCards = data.map((nftCard:any) =>
-      <li>{nftCard.id}</li>
-    );
+    let nftCards = '';
+
+    const loadedStatus = data.isLoading;
+
+    if (loadedStatus === false && data.market != null) {  
+      nftCards = data.market.map((nftCard:any) => {
+        return (
+          <Card>
+            <img src={nftCard.image_url} alt="" />
+            <span>ID {nftCard.id}</span>
+          </Card>
+        );
+      });
+    }
 
     return (
-      <div className="m-container">
+      <div>
         <h2>HomePage</h2>
-        <div className="m-cards__wrap">
+        <Container>
           {nftCards}
-        </div>
+        </Container>
       </div>
     );
   }
