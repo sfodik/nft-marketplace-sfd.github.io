@@ -1,4 +1,4 @@
-import { Container } from "../commonComponents"
+import { Container } from "../common/styles/index"
 
 const Catalog = () => {
     return (
