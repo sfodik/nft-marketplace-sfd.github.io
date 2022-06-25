@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-    width: 100%;
-    padding: 0 60px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    width: 1440px;
+    max-width: 100%;
 `;
 
 const CardContainer = styled.div`
@@ -19,4 +19,14 @@ const CardContainer = styled.div`
     }
 `;
 
-export { Container, CardContainer };
+const FlexWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+`;
+
+const MainInner = styled.div`
+    background: #14141F;
+`;
+
+export { Container, CardContainer, FlexWrapper, MainInner };

@@ -15,6 +15,7 @@ import Catalog from './components/catalog/Catalog';
 import { useDispatch } from 'react-redux';
 import { getMarket } from './store/actions/actions';
 import { ROUTES } from '../src/Routes';
+import { MainInner } from './components/common/styles';
 
 const App = (props:any) => {
 
@@ -25,7 +26,7 @@ const App = (props:any) => {
   }, [])
 
   return (
-    <div>
+    <MainInner>
       <div className='header'>
         <Router>
           <Header/>
@@ -39,7 +40,7 @@ const App = (props:any) => {
           </main>
         </Router>
       </div>
-    </div>
+    </MainInner>
   );
 }
 
