@@ -3,7 +3,7 @@ import { ROUTES } from '../../Routes';
 
 import styled from 'styled-components';
 
-import { Container } from "../commonComponents";
+import { Container } from "../common/styles/index";
 
 const HeaderInner = styled.div`
     background: #190a55;
