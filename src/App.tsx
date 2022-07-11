@@ -1,21 +1,17 @@
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import './styles/common.scss';
 
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
 
-import Header from './components/common/Header';
-import HomePage from './components/homepage/Homepage';
-import Activity from './components/activity/Activity';
-import Catalog from './components/catalog/Catalog';
-
 import { useDispatch } from 'react-redux';
 import { getMarket } from './store/actions/actions';
-import { ROUTES } from '../src/Routes';
 import { MainInner } from './components/common/styles';
+
+import routes from '../src/components/pages/index'
+import Header from './components/common/Header';
 
 const App = (props:any) => {
 
@@ -27,19 +23,14 @@ const App = (props:any) => {
 
   return (
     <MainInner>
-      <div className='header'>
-        <Router>
-          <Header/>
-          <main>
-
-            <Routes>
-              <Route path="/" element={<HomePage />} /> 
-              <Route path={ROUTES.CATALOG_PATH} element={<Catalog/>} />
-              <Route path={ROUTES.ACTIVITY_PATH} element={<Activity/>} />
-            </Routes>
-          </main>
-        </Router>
-      </div>
+      <Header />
+      <Routes>
+        {
+          routes.map((data,index) => (
+            <Route path={data.path} element={data.component} key={index} />
+          ))
+        }
+      </Routes>
     </MainInner>
   );
 }

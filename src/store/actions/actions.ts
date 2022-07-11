@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import { GET_MARKET_SUCCESS, GET_MARKET_PENDING, GET_MARKET_ERROR } from './ActionTypes';
 
 const getMarketAPI = 'https://testnets-api.opensea.io/assets?asset_contract_address=0x5A027A1F234a9499a8eAf308a9d318794633d2A8&order_direction=asc'

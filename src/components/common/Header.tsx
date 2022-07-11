@@ -1,13 +1,8 @@
 import { useRef , useState , useEffect } from 'react';
 import { Link, useLocation } from "react-router-dom";
-import { ROUTES } from '../../Routes';
-
 import menus from "../pages/menu";
-
 import styled from 'styled-components';
-
 import { Container, FlexWrapper } from "../common/styles/index";
-
 import logodark from '../../assets/images/shiba-inu-shib-logo.png';
 import avt from '../../assets/images/avatar/avt-2.jpg';
 import imgsun from '../../assets/images/icon/sun.png'
@@ -233,20 +228,6 @@ const HeaderAvatarPopup = styled.div`
     opacity: 0;
     transform: translateY(-1rem);
     font-size: 16px;
-`;
-
-const HeaderLinks = styled.div`
-    display: flex;
-    flex-direction: column;
-    a {
-        color: #183b56;
-        display: flex;
-        align-items: center;
-        i {
-            margin-right: 10px;
-            font-size: 16px;
-        }        
-    }
 `;
 
 const Header = () => {
