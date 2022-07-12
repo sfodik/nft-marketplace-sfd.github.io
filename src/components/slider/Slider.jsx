@@ -126,6 +126,73 @@ const MainSlider = styled.div`
     margin-right: calc(-100vw / 2 + 100% / 2);
 `;
 
+const ThemesflatContainer = styled.div`
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 1440px;
+    max-width: 100%;
+`;
+
+const WrapHeading = styled.div`
+    padding: 0 15px;
+    display: flex;
+`;
+
+const Content = styled.div`
+    width: 50%;
+    padding-top: 114px;
+`;
+
+const SliderHeadingH2 = styled.div`
+    transition-delay: 700ms !important;
+    font-size: 56px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #fff;
+`;
+
+const TfText = styled.div`
+    color: #14141f;
+    background: linear-gradient(-45deg, #E250E5, #4B50E6, #E250E5, #4B50E6);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 3px transparent;
+    -webkit-text-fill-color: #14141f;
+`;
+
+const SubHeading = styled.div`
+    transition-delay: 900ms;
+    font-size: 20px;
+    line-height: 30px;
+    color: #EBEBEB;
+    text-transform: capitalize;
+    margin-top: 29px;
+    margin-bottom: 44px
+`;
+
+const Image = styled.div`
+    text-align: right;
+    position: relative;
+    width: 50%;
+    padding-top: 30px;
+    padding-right: 132px;
+`;
+
+const ImgBg = styled.img`
+    animation: move5 10s infinite linear;
+    position: absolute;
+    z-index: -1;
+    right: 0%;
+    top: 14%;
+    max-width: 100%;
+`;
+
+const Img = styled.img`
+    animation: move5 10s infinite linear;
+`;
 
 const Slider = props => {
     const data = props.data
@@ -176,28 +243,28 @@ const SliderItem = props => {
             <div className="swiper-wrapper">
                 <div className="swiper-slide">
                     <div className="slider-item">	
-                        <div className="themesflat-container ">
-                            <div className="wrap-heading flat-slider flex">
-                                <div className="content">
-                                    <h2 className="heading">{props.item.title_1}</h2>	
-                                    <h1 className="heading mb-style"><span className="tf-text s1">{props.item.title_2}</span>                                          
-                                    </h1>
-                                    <h1 className="heading">{props.item.title_3}</h1>
-                                    <p className="sub-heading">{props.item.description}
-                                    </p>
+                        <ThemesflatContainer className="themesflat-container ">
+                            <WrapHeading className="wrap-heading flat-slider">
+                                <Content className='content'>
+                                    <SliderHeadingH2 className="heading">{props.item.title_1}</SliderHeadingH2>	
+                                    <SliderHeadingH2 className="heading mb-style"><TfText className="tf-text s1">{props.item.title_2}</TfText>                                          
+                                    </SliderHeadingH2>
+                                    <SliderHeadingH2 className="heading">{props.item.title_3}</SliderHeadingH2>
+                                    <SubHeading className="sub-heading">{props.item.description}
+                                    </SubHeading>
                                     <div className="flat-bt-slider flex style2">
                                         <Link to="/explore-01" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Explore
                                         </span></Link>
                                         <Link to="/create-item" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Create
                                         </span></Link>
                                     </div>
-                                </div>
-                                <div className="image">
-                                    <img className="img-bg" src={props.item.imgbg} alt="axies" />
-                                    <img src={props.item.img} alt="axies" />
-                                </div>
-                            </div>   
-                        </div>					                           
+                                </Content>
+                                <Image className="image">
+                                    <ImgBg className="img-bg" src={props.item.imgbg} alt="axies" />
+                                    <Img src={props.item.img} alt="axies" />
+                                </Image>
+                            </WrapHeading>   
+                        </ThemesflatContainer>
                     </div>
                 </div>
             </div>
