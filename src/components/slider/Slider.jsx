@@ -18,7 +18,7 @@ const FlatTitlePage = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 100px 0 20px;
+    padding: 40px 0 20px;
 `;
 
 const BgrGradient = styled.img`

@@ -5,6 +5,8 @@ import { Card } from '../common/Card';
 import { Container, FlexWrapper } from "../common/styles/index";
 import Slider from '../slider/Slider';
 import heroSliderData from '../../assets/fake-data/data-slider';
+import liveAuctionData from '../../assets/fake-data/data-live-auction';
+import LiveAuction from '../common/LiveAuction';
 
 export interface HomeProps {} const HomePage = (props:HomeProps) => {
 
@@ -20,8 +22,8 @@ export interface HomeProps {} const HomePage = (props:HomeProps) => {
                   )) : 'Loading... ' }
             </FlexWrapper>
             <Slider data={heroSliderData} />
-            {/* <LiveAuction data={liveAuctionData} />
-            <TopSeller data={topSellerData} />
+            <LiveAuction data={liveAuctionData} />
+            {/* <TopSeller data={topSellerData} />
             <TodayPicks data={todayPickData} />
             <PopularCollection data={popularCollectionData} />
             <Create /> */}
