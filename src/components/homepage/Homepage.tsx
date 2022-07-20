@@ -16,7 +16,7 @@ export interface HomeProps {} const HomePage = (props:HomeProps) => {
       <div>
         <h2>HomePage</h2>
         <Container>
-            <FlexWrapper>
+            <FlexWrapper className="m-first-section">
               {!loading && market !== null ? market.map(({id, image_url}) => (
                       <Card id={id} src={image_url}/>
                   )) : 'Loading... ' }

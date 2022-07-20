@@ -56,6 +56,22 @@ const TitleH2 = styled.h2`
     text-align: center;
 `;
 
+const TitleH5 = styled.h5`
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+    text-transform: capitalize;
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: 700;
+    a {
+        text-decoration: none;
+        color: white;
+        letter-spacing: 0.1px;
+    }
+`;
+
 const CardProduct = styled.div`
     padding: 20px;
     background: #343444;
@@ -71,4 +87,48 @@ const CardProduct = styled.div`
     }
 `;
 
-export { Container, CardContainer, FlexWrapper, MainInner, ThemesflatContainer, FlexRow, TitleH2, CardProduct };
+const CardBtn = styled.button`
+    padding: 12px 27px;
+    display: inline-block;
+    border: 2px solid #5142fc;
+    color: #5142fc;
+    box-sizing: border-box;
+    padding: 11px 35px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        border-color: #5142FC;
+        background: #5142FC;
+        color: #fff;
+        span {
+            color: #fff;
+            &:before {
+                color: white;
+            }
+        }
+    }
+    span {
+        color: #343444;
+        padding-left: 28px;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 22px;
+        transition: all 0.3s ease;
+        position: relative;
+        cursor: pointer;
+        &:before {
+            position: absolute;
+            font-family: 'nfts';
+            font-size: 20px;
+            left: 0;
+            font-weight: 100;
+            top: -4px;
+            color: #5142fc;
+        }
+    }
+`;
+
+export { Container, CardContainer, FlexWrapper, MainInner, ThemesflatContainer, FlexRow, TitleH2, CardProduct, CardBtn, TitleH5 };
