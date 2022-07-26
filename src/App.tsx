@@ -12,6 +12,7 @@ import { MainInner } from './components/common/styles';
 
 import routes from '../src/components/pages/index'
 import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 
 const App = (props:any) => {
 
@@ -31,6 +32,7 @@ const App = (props:any) => {
           ))
         }
       </Routes>
+      <Footer />
     </MainInner>
   );
 }
