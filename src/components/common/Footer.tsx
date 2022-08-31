@@ -160,8 +160,8 @@ const Footer = () => {
             link: "/item-details-01"
         },
         {
-            title: "Activity",
-            link: "/activity-01"
+            title: "Explore",
+            link: "/Explore-01"
         },
     ]
     const companyList = [

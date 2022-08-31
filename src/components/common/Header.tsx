@@ -4,8 +4,6 @@ import menus from "../pages/menu";
 import styled from 'styled-components';
 import { Container, FlexWrapper } from "../common/styles/index";
 import logodark from '../../assets/images/shiba-inu-shib-logo.png';
-import avt from '../../assets/images/avatar/avt-2.jpg';
-import imgsun from '../../assets/images/icon/sun.png'
 
 const HeaderInner = styled.div`
     position: absolute;
@@ -190,46 +188,6 @@ const SearchBtn = styled.button`
     background: transparent;
 `;
 
-const AdminInner = styled.div`
-    display: none;
-`;
-
-const HeaderAvatar = styled.div`
-    border-radius: 2000px;
-    border: solid 1px #e2eef1;
-    background: #f9fbfc;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    z-index: 9;
-`;
-
-const HeaderPrice = styled.div`
-    padding: 0 10px 0 20px;
-    font-size: 16px;
-    color: #14141F;
-`;
-
-const HeaderAvatarPopup = styled.div`
-    position: absolute;
-    right: 0;
-    padding: 30px;
-    top: 60px;
-    overflow: hidden;
-    border-radius: 10px;
-    background: #ffffff;
-    transition: all 0.25s ease-in-out;
-    box-shadow: 0px 17px 13px 0px #192c4b05;
-    border: solid 1px #e2eef1;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-1rem);
-    font-size: 16px;
-`;
-
 const Header = () => {
 
     const headerRef = useRef(null);
@@ -320,55 +278,7 @@ const Header = () => {
                             </span></Link>
                         </div>
 
-                        <AdminInner className="admin_active" id="header_admin">
-                            <HeaderAvatar className="header_avatar">
-                                <HeaderPrice className="price">
-                                    <span>2.45 <strong>ETH</strong> </span>
-                                </HeaderPrice>
-                                <img
-                                    className="avatar"
-                                    src={avt}
-                                    alt="avatar"
-                                    />
-                                <HeaderAvatarPopup className="avatar_popup mt-20">
-                                    <div className="d-flex align-items-center copy-text justify-content-between">
-                                        <span> 13b9ebda035r178... </span>
-                                        <Link to="/" className="ml-2">
-                                            <i className="fal fa-copy"></i>
-                                        </Link>
-                                    </div>
-                                    <div className="d-flex align-items-center mt-10">
-                                        <img
-                                            className="coin"
-                                            src={imgsun}
-                                            alt="/"
-                                            />
-                                        <div className="info ml-10">
-                                            <p className="text-sm font-book text-gray-400">Balance</p>
-                                            <p className="w-full text-sm font-bold text-green-500">16.58 ETH</p>
-                                        </div>
-                                    </div>
-                                    <div className="hr"></div>
-                                    <div className="links mt-20">
-                                        <Link to="#">
-                                            <i className="fab fa-accusoft"></i> <span> My items</span>
-                                        </Link>
-                                        <a className="mt-10" href="/edit-profile">
-                                            <i className="fas fa-pencil-alt"></i> <span> Edit Profile</span>
-                                        </a>
-                                        <a className="mt-10" href="/login" id="logout">
-                                            <i className="fal fa-sign-out"></i> <span> Logout</span>
-                                        </a>
-                                    </div>
-                                </HeaderAvatarPopup>
-                            </HeaderAvatar>
-                        </AdminInner>
                     </FlexCommonInner>
-                    {/* <Menu className="m-menu">
-                        <MenuItem><Link to="/">Home</Link></MenuItem>
-                        <MenuItem><Link to={ROUTES.CATALOG_PATH}>Catalog</Link></MenuItem>
-                        <MenuItem><Link to={ROUTES.ACTIVITY_PATH}>Activity</Link></MenuItem>
-                    </Menu> */}
                 </FlexWrapper>
             </Container>
       </HeaderInner>

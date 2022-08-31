@@ -129,8 +129,6 @@ const Card = data => {
 
     const [modalShow, setModalShow] = useState(false);
 
-    console.log(data)
-
     return (
         <CardProduct className="sc-card-product">
             <CardMedia className="card-media">
