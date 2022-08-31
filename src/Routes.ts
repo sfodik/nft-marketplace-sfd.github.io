@@ -1,4 +1,3 @@
 export const ROUTES = {
-    CATALOG_PATH: "/catalog",
-    ACTIVITY_PATH: "/activity"
+    EXPLORE_PATH: "/explore"
 } as const;
