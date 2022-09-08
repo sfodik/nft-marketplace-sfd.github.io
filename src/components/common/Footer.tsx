@@ -12,6 +12,9 @@ const FooterInner = styled.div`
         margin-bottom: 26px;
         font-size: 14px;
         line-height: 22px;
+        @media screen and (max-width: 600px) {
+            padding-right: 0;
+        }
     }
     p {
         color: white;
@@ -20,6 +23,9 @@ const FooterInner = styled.div`
         padding-top: 18px;
         &.style-1 {
             padding-left: 30px;
+            @media screen and (max-width: 600px) {
+                padding-left: 0;
+            }
         }
     }
     .themesflat-container {
@@ -102,6 +108,12 @@ const FormInputBtn = styled.button.attrs({
 const ColLg3 = styled.div`
     flex: 0 0 25%;
     max-width: 25%;
+    @media screen and (max-width: 600px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
 `;
 
 const LogoFooter = styled.div`
@@ -111,12 +123,21 @@ const LogoFooter = styled.div`
         height: auto;
         max-width: 60px;
         vertical-align: middle;
+        @media screen and (max-width: 600px) {
+            margin: 0 auto;
+        }
     }
 `;
 
 const ColLg2 = styled.div`
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
+    @media screen and (max-width: 600px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
 `;
 
 const Title = styled.h5`

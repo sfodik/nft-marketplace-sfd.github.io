@@ -7,15 +7,7 @@ const menus = [
     {
         id: 2,
         name: 'Explore',
-        links: '#',
-        namesub: [
-            {
-                id: 1,
-                sub: 'Explore page',
-                links: '/explore'
-            },
-            
-        ],
+        links: '/explore'
     }
 ]
 

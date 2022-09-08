@@ -17,11 +17,6 @@ export interface HomeProps {} const HomePage = (props:HomeProps) => {
       <div>
         <h2>HomePage</h2>
         <Container>
-            <FlexWrapper className="m-first-section">
-              {!loading && market !== null ? market.map((item,index) => (
-                      <Card key={index} item={item} />
-                  )) : 'Loading... ' }
-            </FlexWrapper>
             <Slider data={heroSliderData} />
             <LiveAuction data={liveAuctionData} />
             <TodayPicks data={todayPickData} />

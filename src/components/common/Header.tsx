@@ -30,6 +30,9 @@ const HeaderInner = styled.div`
     &.is-small {
         top: 0;
     }
+    @media screen and (max-width: 600px) {
+        height: auto;
+    }
 `;
 
 const Menu = styled.div`
@@ -144,6 +147,10 @@ const FlexCommonInner = styled.div`
     top: 0;
     justify-content: end;
     align-items: center;
+    margin-left: auto;
+    @media screen and (max-width: 600px) {
+        margin-right: auto;
+    }
 `;
 
 const SearchWrap = styled.div`
@@ -260,24 +267,10 @@ const Header = () => {
                         </Menu>
                     </MainNav>
                     <FlexCommonInner className="flat-search-btn flex">
-                        <SearchWrap className="header-search flat-show-search" id="s1">
-                            <Link to="#" className="show-search header-search-trigger" onClick={searchBtn}>
-                                <i className="far fa-search"></i>
-                            </Link>
-                            <SearchForm className="top-search" ref={btnSearch}>
-                                <form action="#" method="get" role="search" className="search-form">
-                                    <SearchInput type="search" id="s" className="search-field" placeholder="Search..." name="s" title="Search for" />
-                                    <SearchBtn className="search search-submit" type="submit" title="Search">
-                                        <i className="icon-fl-search-filled"></i>
-                                    </SearchBtn>
-                                </form>
-                            </SearchForm>
-                        </SearchWrap>
                         <div className="sc-btn-top mg-r-12" id="site-header">
                             <Link to="/wallet-connect" className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
                             </span></Link>
                         </div>
-
                     </FlexCommonInner>
                 </FlexWrapper>
             </Container>
