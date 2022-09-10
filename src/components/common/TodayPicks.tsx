@@ -2,7 +2,7 @@ import React , { useState , Fragment } from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import CardModal from './CardModal';
-import Card from './Card';
+import Card from '../card/Card';
 import styled from 'styled-components';
 import { FlexWrapper, ThemesflatContainer, TitleH2 } from './styles';
 

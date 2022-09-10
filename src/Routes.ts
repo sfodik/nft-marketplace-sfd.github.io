@@ -1,3 +1,5 @@
 export const ROUTES = {
-    EXPLORE_PATH: "/explore"
+    ROOT_LINK: "/",
+    EXPLORE_PATH: "/explore",
+    MOCKED_LOGIN_LINK: "/login"
 } as const;

@@ -1,8 +1,106 @@
-import { useState } from 'react';
 import styled from 'styled-components';
-import Countdown from "react-countdown";
-import { Link } from 'react-router-dom'
-import { CardBtn, CardProduct, TitleH5 } from './styles';
+
+const Container = styled.div`
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    width: 1440px;
+    max-width: 100%;
+`;
+
+const CardContainer = styled.div`
+    width: 20%;
+    margin-right: 60px;
+    display: block;
+    padding: 20px;
+    img {
+        max-width: 100%;
+    }
+`;
+
+const TitleH2 = styled.h2`
+    font-size: 36px;
+    position: relative;
+    line-height: 44px;
+    color: white;
+    text-align: center;
+`;
+
+const TitleH5 = styled.h5`
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+    text-transform: capitalize;
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: 700;
+    a {
+        text-decoration: none;
+        color: white;
+        letter-spacing: 0.1px;
+    }
+`;
+
+const CardProduct = styled.div`
+    padding: 20px;
+    background: #343444;
+    box-shadow: 0px 3px 16px rgb(47 83 109 / 12%);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        transition: all 0.4s ease;
+    }
+`;
+
+const CardBtn = styled.button`
+    padding: 12px 27px;
+    display: inline-block;
+    border: 2px solid #5142fc;
+    color: #5142fc;
+    box-sizing: border-box;
+    padding: 11px 35px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        border-color: #5142FC;
+        background: #5142FC;
+        color: #fff;
+        span {
+            color: #fff;
+            &:before {
+                color: white;
+            }
+        }
+    }
+    span {
+        color: #343444;
+        padding-left: 28px;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 22px;
+        transition: all 0.3s ease;
+        position: relative;
+        cursor: pointer;
+        &:before {
+            position: absolute;
+            font-family: 'nfts';
+            font-size: 20px;
+            left: 0;
+            font-weight: 100;
+            top: -4px;
+            color: #5142fc;
+        }
+    }
+`;
 
 const CardMedia = styled.div`
     position: relative;
@@ -125,48 +223,13 @@ const MetaInfo = styled.div`
     }
 `;
 
-const Card = data => {
+const Avatar = styled.div`
+    width: 44px;
+    height: 44px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 12px;
+    flex-shrink: 0;
+`;
 
-    const [modalShow, setModalShow] = useState(false);
-
-    return (
-        <CardProduct className="sc-card-product">
-            <CardMedia className="card-media">
-                <Link to="/item-details-01"><img src={data.item.image_preview_url ? data.item.image_preview_url : data.item.img} alt="axies" /></Link>
-                <Link to="/login" className="wishlist-button heart"><span className="number-like">{data.item.wishlist !== undefined ? data.item.wishlist : ''}</span></Link>
-                <FeaturedCountdown className="featured-countdown">
-                    <span className="slogan"></span>
-                    <Countdown date={Date.now() + 500000000}>
-                        <span>You are good to go!</span>
-                    </Countdown>
-                </FeaturedCountdown>
-                <ButtonPlaceBid className="button-place-bid">
-                    <CardBtn onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></CardBtn>
-                </ButtonPlaceBid>
-            </CardMedia>
-            <CardTitle className="card-title">
-                <TitleH5><Link to="/item-details-01">"{data.item.name ? data.item.name : data.item.title}"</Link></TitleH5>
-                <Tags className="tags">{data.item.tags !== undefined ? data.item.tags : 'tag'}</Tags>
-            </CardTitle>
-            <MetaInfo className="meta-info">
-                <div className="author">
-                    <div className="avatar">
-                        <img src={data.item.imgAuthor !== undefined ? data.item.imgAuthor : 'https://pbs.twimg.com/media/FRD-mSRXIAAaOK4.png'} alt="axies" />
-                    </div>
-                    <div className="info">
-                        <span>Creator</span>
-                        <h6> <Link to="/authors-02">{data.item.nameAuthor !== undefined ? data.item.nameAuthor : 'Shiba Satoshi'}
-                        </Link> </h6>
-                    </div>
-                </div>
-                <div className="price">
-                    <span>Current Bid</span>
-                    <h6>{data.item.price !== undefined ? data.item.price : '5 ETH'}</h6>
-                </div>
-            </MetaInfo>
-        </CardProduct>
-    )
-}
-
-
-export default Card;
+export { Container, CardContainer, CardMedia, CardTitle, TitleH2, CardProduct, CardBtn, TitleH5, MetaInfo, FeaturedCountdown, ButtonPlaceBid, Tags, Avatar };

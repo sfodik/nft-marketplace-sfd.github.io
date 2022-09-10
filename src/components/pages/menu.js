@@ -1,13 +1,15 @@
+import { ROUTES } from '../../Routes';
+
 const menus = [
     {
         id: 1,
         name: 'Home',
-        links: '/'
+        links: ROUTES.ROOT_LINK
     },
     {
         id: 2,
         name: 'Explore',
-        links: '/explore'
+        links: ROUTES.EXPLORE_PATH
     }
 ]
 
