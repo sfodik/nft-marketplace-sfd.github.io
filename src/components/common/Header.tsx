@@ -153,48 +153,6 @@ const FlexCommonInner = styled.div`
     }
 `;
 
-const SearchWrap = styled.div`
-    position: relative;
-    margin-right: 36px;
-    padding: 14px 0;
-`;
-
-const SearchForm = styled.div`
-    position: absolute;
-    right: -16px;
-    top: 130%;
-    width: 250px;
-    opacity: 0;
-    visibility: hidden;
-`;
-
-const SearchInput = styled.input`
-    background: #F8F8F8;
-    color: #14141F;
-    width: 100%;
-    padding-left: 20px;
-    border: 1px solid #fff;
-    border-radius: 30px;
-    line-height: 23px;
-    padding: 13px 50px 13px 15px;
-`;
-
-const SearchBtn = styled.button`
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 20px;
-    background: none;
-    color: #14141F;
-    border-radius: 0;
-    transition: all ease .3s;
-    border: none;
-    border-radius: 30px;
-    line-height: 20px;
-    padding: 15px 15px;
-    background: transparent;
-`;
-
 const Header = () => {
 
     const headerRef = useRef(null);

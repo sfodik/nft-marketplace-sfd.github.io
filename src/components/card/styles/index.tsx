@@ -181,11 +181,6 @@ const MetaInfo = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4px;
-    .author {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
     .price {
         text-align: right;
         color: white;
@@ -203,7 +198,7 @@ const MetaInfo = styled.div`
         margin-right: 12px;
         flex-shrink: 0;
     }
-    .info span {
+    span {
         color: #8a8aa0;
         font-size: 13px;
         line-height: 21px;
@@ -232,4 +227,37 @@ const Avatar = styled.div`
     flex-shrink: 0;
 `;
 
-export { Container, CardContainer, CardMedia, CardTitle, TitleH2, CardProduct, CardBtn, TitleH5, MetaInfo, FeaturedCountdown, ButtonPlaceBid, Tags, Avatar };
+const WishlistButton = styled.div`
+    position: absolute;
+    top: 13px;
+    right: 11px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    padding: 2px 11px;
+    border-radius: 8px;
+    background-color: #14141F;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    &::before {
+        content: '\f004';
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 300;
+        margin-right: 6px;
+    }
+`;
+
+const Like = styled.div`
+    width: 22px;
+    display: inline-block;
+`;
+
+const Author = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export { Container, CardContainer, CardMedia, CardTitle, TitleH2, CardProduct, CardBtn, TitleH5, MetaInfo, FeaturedCountdown, ButtonPlaceBid, Tags, Avatar, WishlistButton, Like, Author };
