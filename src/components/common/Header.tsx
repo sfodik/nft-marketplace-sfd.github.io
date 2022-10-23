@@ -151,6 +151,36 @@ const FlexCommonInner = styled.div`
     @media screen and (max-width: 600px) {
         margin-right: auto;
     }
+    span {
+        padding-left: 28px;
+        font-size: 15px;
+        z-index: 1;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        position: relative;
+        transition: all 0.3s ease;
+        &:before {
+            position: absolute;
+            font-family: 'nfts';
+            font-size: 20px;
+            left: 0;
+            font-weight: 100;
+            top: -4px;
+        }
+    }
+    a {
+        padding: 12px 35px 12px 32px;
+        position: relative;
+        display: inline-block;
+        border: 2px solid #5142FC;
+        color: white;
+        box-sizing: border-box;
+        padding: 11px 35px;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
 `;
 
 const Header = () => {
@@ -225,10 +255,8 @@ const Header = () => {
                         </Menu>
                     </MainNav>
                     <FlexCommonInner className="flat-search-btn flex">
-                        <div className="sc-btn-top mg-r-12" id="site-header">
-                            <Link to="/wallet-connect" className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
+                            <Link to="/wallet-connect" className="button-ntfs-font"><span>Wallet connect
                             </span></Link>
-                        </div>
                     </FlexCommonInner>
                 </FlexWrapper>
             </Container>

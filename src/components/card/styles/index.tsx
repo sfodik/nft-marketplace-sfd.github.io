@@ -43,6 +43,17 @@ const TitleH5 = styled.h5`
     }
 `;
 
+const ButtonPlaceBid = styled.div`
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+`;
+
 const CardProduct = styled.div`
     padding: 20px;
     background: #343444;
@@ -55,6 +66,11 @@ const CardProduct = styled.div`
         transform: translateY(-10px);
         transition: all 0.3s ease;
         transition: all 0.4s ease;
+        ${ButtonPlaceBid} {
+            top: 50%;
+            opacity: 1;
+            transition-delay: 0.1s;
+        }
     }
 `;
 
@@ -91,8 +107,8 @@ const CardBtn = styled.button`
         position: relative;
         cursor: pointer;
         &:before {
+            transition: all 0.05s ease;
             position: absolute;
-            font-family: 'nfts';
             font-size: 20px;
             left: 0;
             font-weight: 100;
@@ -135,17 +151,6 @@ const Tags = styled.div`
     text-transform: uppercase;
 `;
 
-const ButtonPlaceBid = styled.div`
-    position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    text-align: center;
-    opacity: 0;
-    transition: all 0.4s ease;
-`;
-
 const FeaturedCountdown = styled.div`
     position: absolute;
     bottom: 8px;
@@ -163,7 +168,7 @@ const FeaturedCountdown = styled.div`
     background-color: #343444;
     height: 36px;
     width: 151px;
-    .slogan {
+    .button-ntfs-font-fire {
         margin-right: 20px;
         &:before {
             font-family: 'nfts';
@@ -260,4 +265,16 @@ const Author = styled.div`
     justify-content: space-between;
 `;
 
-export { Container, CardContainer, CardMedia, CardTitle, TitleH2, CardProduct, CardBtn, TitleH5, MetaInfo, FeaturedCountdown, ButtonPlaceBid, Tags, Avatar, WishlistButton, Like, Author };
+const CardsPickSecteion = styled.div`
+    padding: 58px 0 43px;
+    ${CardProduct} {
+        max-width: 324px;
+        margin-right: 28px;
+        margin-bottom: 30px;
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+    }
+`;
+
+export { Container, CardContainer, CardMedia, CardTitle, TitleH2, CardProduct, CardBtn, TitleH5, MetaInfo, FeaturedCountdown, ButtonPlaceBid, Tags, Avatar, WishlistButton, Like, Author, CardsPickSecteion };

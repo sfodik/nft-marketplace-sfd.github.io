@@ -4,8 +4,8 @@ import Countdown from "react-countdown";
 const CardCountdown = data => {
 
     return (
-        <FeaturedCountdown className="featured-countdown">
-            <span className="slogan"></span>
+        <FeaturedCountdown>
+            <span className="button-ntfs-font-fire"></span>
             <Countdown date={Date.now() + 500000000}>
                 <span>You are good to go!</span>
             </Countdown>

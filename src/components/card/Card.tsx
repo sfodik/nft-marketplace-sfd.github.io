@@ -13,17 +13,17 @@ const Card = data => {
     };
 
     return (
-        <CardProduct className="sc-card-product">
+        <CardProduct>
             <CardMedia>
                 <Link to={ROUTES.ITEM}><img src={data.item.image_preview_url || data.item.img} alt="axies" /></Link>
-                <Link to={ROUTES.MOCKED_LOGIN_LINK} className="wishlist-button heart">
+                <Link to={ROUTES.MOCKED_LOGIN_LINK}>
                     <WishlistButton>
                         <Like>{data.item.wishlist || ''}</Like>
                     </WishlistButton>
                 </Link>
                 <CardCountdown/>
-                <ButtonPlaceBid data-button-place-bid>
-                    <CardBtn onClick={() => openModal() } className="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></CardBtn>
+                <ButtonPlaceBid>
+                    <CardBtn onClick={() => openModal() } className="button-ntfs-font"><span>Place Bid</span></CardBtn>
                 </ButtonPlaceBid>
             </CardMedia>
             <CardTitle className="card-title">
