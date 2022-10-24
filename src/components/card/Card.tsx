@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
-import { CardMedia, CardTitle, CardProduct, CardBtn, TitleH5, MetaInfo, ButtonPlaceBid, Tags, Avatar, WishlistButton, Like, Author } from './styles';
+import { CardMedia, CardTitle, CardProduct, CardBtn, TitleH5, MetaInfo, ButtonPlaceBid, Tags, Avatar, WishlistButton, Like, Author, Price } from './styles';
 import { ROUTES } from '../../Routes';
 import CardCountdown from '../common/Countdown';
+import { ExternalLink } from 'react-external-link';
 
 const Card = data => {
 
@@ -26,25 +27,25 @@ const Card = data => {
                     <CardBtn onClick={() => openModal() } className="button-ntfs-font"><span>Place Bid</span></CardBtn>
                 </ButtonPlaceBid>
             </CardMedia>
-            <CardTitle className="card-title">
-                <TitleH5><Link to={ROUTES.ITEM}>"{data.item.name ? data.item.name : data.item.title}"</Link></TitleH5>
+            <CardTitle>
+                <TitleH5><Link to={ROUTES.ITEM}>"{data.item.name || data.item.title}"</Link></TitleH5>
                 <Tags>{data.item.tags || 'tag'}</Tags>
             </CardTitle>
             <MetaInfo>
                 <Author>
                     <Avatar>
-                        <img src={data.item.imgAuthor !== undefined ? data.item.imgAuthor : 'https://pbs.twimg.com/media/FRD-mSRXIAAaOK4.png'} alt="axies" />
+                        <img src={data.item.imgAuthor ||'https://pbs.twimg.com/media/FRD-mSRXIAAaOK4.png'} alt="axies" />
                     </Avatar>
                     <div>
                         <span>Creator</span>
-                        <h6> <Link to="/authors-02">{data.item.nameAuthor !== undefined ? data.item.nameAuthor : 'Shiba Satoshi'}
-                        </Link> </h6>
+                        <h6> <ExternalLink href={ROUTES.AUTHOR_LINK}>{data.item.nameAuthor || 'Shiba Satoshi'}
+                        </ExternalLink> </h6>
                     </div>
                 </Author>
-                <div className="price">
+                <Price>
                     <span>Current Bid</span>
-                    <h6>{data.item.price !== undefined ? data.item.price : '5 ETH'}</h6>
-                </div>
+                    <h6>{data.item.price || '5 ETH'}</h6>
+                </Price>
             </MetaInfo>
         </CardProduct>
     )

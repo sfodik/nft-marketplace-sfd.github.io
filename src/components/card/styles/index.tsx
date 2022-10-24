@@ -181,20 +181,21 @@ const FeaturedCountdown = styled.div`
     }
 `;
 
+const Price = styled.div`
+    text-align: right;
+    color: white;
+    span {
+        color: #8a8aa0;
+        font-size: 13px;
+        line-height: 21px;
+    }
+`;
+
 const MetaInfo = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4px;
-    .price {
-        text-align: right;
-        color: white;
-        span {
-            color: #8a8aa0;
-            font-size: 13px;
-            line-height: 21px;
-        }
-    }
     .avatar {
         width: 44px;
         height: 44px;
@@ -277,4 +278,4 @@ const CardsPickSecteion = styled.div`
     }
 `;
 
-export { Container, CardContainer, CardMedia, CardTitle, TitleH2, CardProduct, CardBtn, TitleH5, MetaInfo, FeaturedCountdown, ButtonPlaceBid, Tags, Avatar, WishlistButton, Like, Author, CardsPickSecteion };
+export { Container, CardContainer, CardMedia, CardTitle, TitleH2, CardProduct, CardBtn, TitleH5, MetaInfo, FeaturedCountdown, ButtonPlaceBid, Tags, Avatar, WishlistButton, Like, Author, CardsPickSecteion, Price };

@@ -4,6 +4,7 @@ import menus from "../pages/menu";
 import styled from 'styled-components';
 import { Container, FlexWrapper } from "../common/styles/index";
 import logodark from '../../assets/images/shiba-inu-shib-logo.png';
+import "../../assets/fonts/fonts.css";
 
 const HeaderInner = styled.div`
     position: absolute;
@@ -161,6 +162,8 @@ const FlexCommonInner = styled.div`
         position: relative;
         transition: all 0.3s ease;
         &:before {
+            content: "\e901";
+            transition: all 0.05s ease;
             position: absolute;
             font-family: 'nfts';
             font-size: 20px;
