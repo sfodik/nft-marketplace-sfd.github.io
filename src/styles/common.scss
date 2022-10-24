@@ -198,10 +198,10 @@ body {
   margin-right: -15px;
 }
 
-.button-ntfs-font span::before {
-  content: "\e901";
-  transition: all 0.05s ease;
-}
+// .button-ntfs-font span::before {
+//   content: "\e901";
+//   transition: all 0.05s ease;
+// }
 
 .sc-card-product {
   &:hover {
@@ -219,10 +219,6 @@ body {
     width: 22px;
     display: inline-block;
   }
-}
-
-.button-ntfs-font-fire::before {
-    content: '\e900';
 }
 
 .modal-open {

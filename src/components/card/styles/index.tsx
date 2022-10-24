@@ -151,6 +151,16 @@ const Tags = styled.div`
     text-transform: uppercase;
 `;
 
+const CountDownIcon = styled.span`
+    margin-right: 20px;
+    &:before {
+        content: '\\e900';
+        font-family: 'nfts';
+        color: #5b6afa;
+        font-size: 20px;
+    }
+`;
+
 const FeaturedCountdown = styled.div`
     position: absolute;
     bottom: 8px;
@@ -168,14 +178,6 @@ const FeaturedCountdown = styled.div`
     background-color: #343444;
     height: 36px;
     width: 151px;
-    .button-ntfs-font-fire {
-        margin-right: 20px;
-        &:before {
-            font-family: 'nfts';
-            color: #5b6afa;
-            font-size: 20px;
-        }
-    }
     span:last-child {
         color: white;
     }
@@ -278,4 +280,4 @@ const CardsPickSecteion = styled.div`
     }
 `;
 
-export { Container, CardContainer, CardMedia, CardTitle, TitleH2, CardProduct, CardBtn, TitleH5, MetaInfo, FeaturedCountdown, ButtonPlaceBid, Tags, Avatar, WishlistButton, Like, Author, CardsPickSecteion, Price };
+export { Container, CardContainer, CardMedia, CardTitle, TitleH2, CardProduct, CardBtn, TitleH5, MetaInfo, FeaturedCountdown, ButtonPlaceBid, Tags, Avatar, WishlistButton, Like, Author, CardsPickSecteion, Price, CountDownIcon };

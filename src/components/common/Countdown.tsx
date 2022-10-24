@@ -1,11 +1,11 @@
-import { FeaturedCountdown } from '../card/styles/index';
+import { FeaturedCountdown, CountDownIcon } from '../card/styles/index';
 import Countdown from "react-countdown";
 
 const CardCountdown = data => {
 
     return (
         <FeaturedCountdown>
-            <span className="button-ntfs-font-fire"></span>
+            <CountDownIcon/>
             <Countdown date={Date.now() + 500000000}>
                 <span>You are good to go!</span>
             </Countdown>

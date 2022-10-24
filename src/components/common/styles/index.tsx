@@ -35,6 +35,8 @@ const MainInner = styled.div`
 
 const ThemesflatContainer = styled.div`
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     padding-right: 15px;

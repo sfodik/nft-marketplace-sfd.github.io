@@ -162,7 +162,7 @@ const FlexCommonInner = styled.div`
         position: relative;
         transition: all 0.3s ease;
         &:before {
-            content: "\e901";
+            content: '\\e901';
             transition: all 0.05s ease;
             position: absolute;
             font-family: 'nfts';
@@ -258,7 +258,7 @@ const Header = () => {
                         </Menu>
                     </MainNav>
                     <FlexCommonInner className="flat-search-btn flex">
-                            <Link to="/wallet-connect" className="button-ntfs-font"><span>Wallet connect
+                            <Link to="/wallet-connect"><span>Wallet connect
                             </span></Link>
                     </FlexCommonInner>
                 </FlexWrapper>
