@@ -2,22 +2,10 @@ import React , { useState , Fragment } from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import CardModal from './CardModal';
-import Card from './Card';
+import Card  from '../card/Card';
 import styled from 'styled-components';
 import { FlexWrapper, ThemesflatContainer, TitleH2 } from './styles';
-
-
-const TodayPicksSection = styled.div`
-    padding: 58px 0 43px;
-    .sc-card-product {
-        max-width: 324px;
-        margin-right: 28px;
-        margin-bottom: 30px;
-        &:nth-child(4n) {
-            margin-right: 0;
-        }
-    }
-`;
+import { CardsPickSecteion } from '../card/styles';
 
 const TodayPicksHeaderWrap = styled.div`
     display: flex;
@@ -63,7 +51,7 @@ const TodayPicks = props => {
     const [modalShow, setModalShow] = useState(false);
     return (
         <Fragment>
-        <TodayPicksSection className="tf-section today-pick">
+        <CardsPickSecteion>
             <ThemesflatContainer className="themesflat-container">
                     <TodayPicksHeaderWrap className="col-md-12">
                         <TitleH2 className="tf-title">
@@ -85,7 +73,7 @@ const TodayPicks = props => {
                     }
                     </FlexWrapper>
             </ThemesflatContainer>
-        </TodayPicksSection>
+        </CardsPickSecteion>
         <CardModal
         show={modalShow}
         onHide={() => setModalShow(false)}

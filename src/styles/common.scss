@@ -2,48 +2,6 @@
 @import "animations";
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@font-face {
-    font-family: 'Font Awesome 5 Pro';
-    font-style: normal;
-    font-weight: 300;
-    font-display: block;
-    src: url("../assets/fonts/fa-light-300.eot");
-    src: url("../assets/fonts/fa-light-300.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/fa-light-300.woff2") format("woff2"), url("../assets/fonts/fa-light-300.woff") format("woff"), url("../assets/fonts/fa-light-300.ttf") format("truetype"), url("../assets/fonts/fa-light-300.svg#fontawesome") format("svg"); }
-  
-  .fal {
-    font-family: 'Font Awesome 5 Pro';
-    font-weight: 300; }
-  @font-face {
-    font-family: 'Font Awesome 5 Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-    src: url("../assets/fonts/fa-regular-400.eot");
-    src: url("../assets/fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/fa-regular-400.woff2") format("woff2"), url("../assets/fonts/fa-regular-400.woff") format("woff"), url("../assets/fonts/fa-regular-400.ttf") format("truetype"), url("../assets/fonts/fa-regular-400.svg#fontawesome") format("svg"); }
-  
-  .far {
-    font-family: 'Font Awesome 5 Pro';
-    font-weight: 400; }
-  @font-face {
-    font-family: 'Font Awesome 5 Pro';
-    font-style: normal;
-    font-weight: 900;
-    font-display: block;
-    src: url("../assets/fonts/fa-solid-900.eot");
-    src: url("../assets/fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/fa-solid-900.woff2") format("woff2"), url("../assets/fonts/fa-solid-900.woff") format("woff"), url("../assets/fonts/fa-solid-900.ttf") format("truetype"), url("../assets/fonts/fa-solid-900.svg#fontawesome") format("svg"); }
-
-@font-face {
-  font-family: 'nfts';
-  src:  url('../assets/fonts/nfts.eot');
-  src:  url('../assets/fonts/nfts.eot') format('embedded-opentype'),
-    url('../assets/fonts/nfts.ttf') format('truetype'),
-    url('../assets/fonts/nfts.woff') format('woff'),
-    url('../assets/fonts/nfts.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
 #root {
   overflow: hidden;
 }
@@ -97,34 +55,11 @@ body {
   }
 }
 
-.flat-search-btn .sc-button {
-  padding: 12px 35px 12px 32px;
-  position: relative;
-  display: inline-block;
-  border: 2px solid #5142FC;
-  color: white;
-  box-sizing: border-box;
-  padding: 11px 35px;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  text-decoration: none;
+.button-ntfs-font {
   span {
-    padding-left: 28px;
-    font-size: 15px;
-    z-index: 1;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 22px;
-    position: relative;
-    transition: all 0.3s ease;
     &:before {
       content: "\e917";
-      position: absolute;
       font-family: 'nfts';
-      font-size: 20px;
-      left: 0;
-      font-weight: 100;
-      top: -4px;
     }
   }
 }
@@ -263,14 +198,14 @@ body {
   margin-right: -15px;
 }
 
-.bag span::before {
-  content: "\e901";
-  transition: all 0.05s ease;
-}
+// .button-ntfs-font span::before {
+//   content: "\e901";
+//   transition: all 0.05s ease;
+// }
 
 .sc-card-product {
   &:hover {
-    .button-place-bid {
+    [data-button-place-bid] {
       top: 50%;
       opacity: 1;
       transition-delay: 0.1s;
@@ -280,35 +215,10 @@ body {
       object-fit: cover;
     }
   }
-  .wishlist-button {
-    position: absolute;
-    top: 13px;
-    right: 11px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 24px;
-    color: #fff;
-    padding: 2px 11px;
-    border-radius: 8px;
-    background-color: #14141F;
-    cursor: pointer;
-    border: none;
-    text-decoration: none;
-    &.heart::before {
-      content: '\f004';
-      font-family: 'Font Awesome 5 Pro';
-      font-weight: 300;
-      margin-right: 6px;
-    }
-  }
   .number-like {
     width: 22px;
     display: inline-block;
   }
-}
-
-.slogan::before {
-    content: '\e900';
 }
 
 .modal-open {

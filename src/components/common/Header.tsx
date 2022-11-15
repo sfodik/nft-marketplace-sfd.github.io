@@ -4,6 +4,7 @@ import menus from "../pages/menu";
 import styled from 'styled-components';
 import { Container, FlexWrapper } from "../common/styles/index";
 import logodark from '../../assets/images/shiba-inu-shib-logo.png';
+import "../../assets/fonts/fonts.css";
 
 const HeaderInner = styled.div`
     position: absolute;
@@ -29,6 +30,9 @@ const HeaderInner = styled.div`
     }
     &.is-small {
         top: 0;
+    }
+    @media screen and (max-width: 600px) {
+        height: auto;
     }
 `;
 
@@ -144,48 +148,42 @@ const FlexCommonInner = styled.div`
     top: 0;
     justify-content: end;
     align-items: center;
-`;
-
-const SearchWrap = styled.div`
-    position: relative;
-    margin-right: 36px;
-    padding: 14px 0;
-`;
-
-const SearchForm = styled.div`
-    position: absolute;
-    right: -16px;
-    top: 130%;
-    width: 250px;
-    opacity: 0;
-    visibility: hidden;
-`;
-
-const SearchInput = styled.input`
-    background: #F8F8F8;
-    color: #14141F;
-    width: 100%;
-    padding-left: 20px;
-    border: 1px solid #fff;
-    border-radius: 30px;
-    line-height: 23px;
-    padding: 13px 50px 13px 15px;
-`;
-
-const SearchBtn = styled.button`
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 20px;
-    background: none;
-    color: #14141F;
-    border-radius: 0;
-    transition: all ease .3s;
-    border: none;
-    border-radius: 30px;
-    line-height: 20px;
-    padding: 15px 15px;
-    background: transparent;
+    margin-left: auto;
+    @media screen and (max-width: 600px) {
+        margin-right: auto;
+    }
+    span {
+        padding-left: 28px;
+        font-size: 15px;
+        z-index: 1;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        position: relative;
+        transition: all 0.3s ease;
+        &:before {
+            content: '\\e901';
+            transition: all 0.05s ease;
+            position: absolute;
+            font-family: 'nfts';
+            font-size: 20px;
+            left: 0;
+            font-weight: 100;
+            top: -4px;
+        }
+    }
+    a {
+        padding: 12px 35px 12px 32px;
+        position: relative;
+        display: inline-block;
+        border: 2px solid #5142FC;
+        color: white;
+        box-sizing: border-box;
+        padding: 11px 35px;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
 `;
 
 const Header = () => {
@@ -260,24 +258,8 @@ const Header = () => {
                         </Menu>
                     </MainNav>
                     <FlexCommonInner className="flat-search-btn flex">
-                        <SearchWrap className="header-search flat-show-search" id="s1">
-                            <Link to="#" className="show-search header-search-trigger" onClick={searchBtn}>
-                                <i className="far fa-search"></i>
-                            </Link>
-                            <SearchForm className="top-search" ref={btnSearch}>
-                                <form action="#" method="get" role="search" className="search-form">
-                                    <SearchInput type="search" id="s" className="search-field" placeholder="Search..." name="s" title="Search for" />
-                                    <SearchBtn className="search search-submit" type="submit" title="Search">
-                                        <i className="icon-fl-search-filled"></i>
-                                    </SearchBtn>
-                                </form>
-                            </SearchForm>
-                        </SearchWrap>
-                        <div className="sc-btn-top mg-r-12" id="site-header">
-                            <Link to="/wallet-connect" className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
+                            <Link to="/wallet-connect"><span>Wallet connect
                             </span></Link>
-                        </div>
-
                     </FlexCommonInner>
                 </FlexWrapper>
             </Container>

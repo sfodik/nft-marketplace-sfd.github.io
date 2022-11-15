@@ -7,11 +7,15 @@ import { ThemesflatContainer } from './styles';
 const FooterInner = styled.div`
     padding: 80px 0 80px;
     background: #030303;
-    .sub-widget-logo {
+    span {
         padding-right: 35px;
         margin-bottom: 26px;
         font-size: 14px;
         line-height: 22px;
+        color: white;
+        @media screen and (max-width: 600px) {
+            padding-right: 0;
+        }
     }
     p {
         color: white;
@@ -20,6 +24,9 @@ const FooterInner = styled.div`
         padding-top: 18px;
         &.style-1 {
             padding-left: 30px;
+            @media screen and (max-width: 600px) {
+                padding-left: 0;
+            }
         }
     }
     .themesflat-container {
@@ -86,15 +93,19 @@ const FormInputBtn = styled.button.attrs({
     line-height: 22px;
     border: 1px solid #5142fc;
     cursor: pointer;
-    i {
-        color: #ffffff;
-        transition: all 0.3s ease-in-out;
-        font-family: 'nfts' !important;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
+`;
+
+const IconSend = styled.span`
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    font-family: 'nfts' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    &:before {
+        content: "\\e91e";
     }
 `;
 
@@ -102,6 +113,12 @@ const FormInputBtn = styled.button.attrs({
 const ColLg3 = styled.div`
     flex: 0 0 25%;
     max-width: 25%;
+    @media screen and (max-width: 600px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
 `;
 
 const LogoFooter = styled.div`
@@ -111,12 +128,21 @@ const LogoFooter = styled.div`
         height: auto;
         max-width: 60px;
         vertical-align: middle;
+        @media screen and (max-width: 600px) {
+            margin: 0 auto;
+        }
     }
 `;
 
 const ColLg2 = styled.div`
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
+    @media screen and (max-width: 600px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
 `;
 
 const Title = styled.h5`
@@ -237,20 +263,19 @@ const Footer = () => {
       
     return (
         <div>
-            <FooterInner id="footer" className="footer-light-style clearfix bg-style">
-                <ThemesflatContainer className="themesflat-container">
-                    <ColLg3 className="col-lg-3 col-md-12 col-12">
-                        <div className="widget widget-logo">
-                            <LogoFooter className="logo-footer" id="logo-footer">
+            <FooterInner id="footer">
+                <ThemesflatContainer>
+                    <ColLg3>
+                        <div>
+                            <LogoFooter id="logo-footer">
                                 <Link to="/">
-                                    <img className='logo-dark' id="logo_footer" src={logodark} alt="nft-gaming" />
-                                    
+                                    <img id="logo_footer" src={logodark} alt="nft-gaming" />
                                 </Link>
                             </LogoFooter>
-                            <p className="sub-widget-logo">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</p>
+                            <span>Lorem ipsum dolor sit amet,consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</span>
                         </div>
                     </ColLg3>
-                    <ColLg2 className="col-lg-2 col-md-4 col-sm-5 col-5">
+                    <ColLg2>
                         <div className="widget widget-menu style-1">
                             <Title className="title-widget">My Account</Title>
                             <ul>
@@ -262,7 +287,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </ColLg2>
-                    <ColLg2 className="col-lg-2 col-md-4 col-sm-7 col-7">
+                    <ColLg2>
                         <div className="widget widget-menu style-2">
                             <Title className="title-widget">Resources</Title>
                             <ul>
@@ -274,7 +299,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </ColLg2>
-                    <ColLg2 className="col-lg-2 col-md-4 col-sm-5 col-5">
+                    <ColLg2>
                         <div className="widget widget-menu fl-st-3">
                             <Title className="title-widget">Company</Title>
                             <ul>
@@ -286,13 +311,13 @@ const Footer = () => {
                             </ul>
                         </div>
                     </ColLg2>
-                    <ColLg3 className="col-lg-3 col-md-6 col-sm-7 col-12">
+                    <ColLg3>
                         <div className="widget widget-subcribe">
                             <Title className="title-widget">Subscribe Us</Title>
                             <div className="form-subcribe">
                                 <form id="subscribe-form" action="#" method="GET" acceptCharset="utf-8" className="form-submit">
                                     <FormInput name="email" className="email" required />
-                                    <FormInputBtn id="submit" ><i className="icon-fl-send"></i></FormInputBtn>
+                                    <FormInputBtn id="submit" ><IconSend></IconSend></FormInputBtn>
                                 </form>
                             </div>
                             <div className="widget-social style-1 mg-t32">

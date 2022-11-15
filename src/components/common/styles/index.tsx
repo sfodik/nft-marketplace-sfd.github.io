@@ -23,6 +23,10 @@ const FlexWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    @media screen and (max-width: 600px) {
+        justify-content: center;
+        padding: 30px 0 20px;
+    }
 `;
 
 const MainInner = styled.div`
@@ -31,6 +35,8 @@ const MainInner = styled.div`
 
 const ThemesflatContainer = styled.div`
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     padding-right: 15px;

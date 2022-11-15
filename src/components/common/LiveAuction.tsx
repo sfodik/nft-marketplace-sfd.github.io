@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import CardModal from './CardModal'
-import Card from './Card';
+import Card from '../card/Card';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import styled from 'styled-components';
-import { CardBtn, CardProduct, FlexRow, ThemesflatContainer, TitleH2, TitleH5 } from './styles';
+import { FlexRow, ThemesflatContainer, TitleH2 } from './styles';
 
 const LiveAuctions = styled.div`
     padding: 50px 0;

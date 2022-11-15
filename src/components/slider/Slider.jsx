@@ -1,6 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 import { Navigation, Scrollbar, A11y   } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
@@ -243,7 +241,7 @@ const SliderItem = props => {
             <div className="swiper-wrapper">
                 <div className="swiper-slide">
                     <div className="slider-item">	
-                        <ThemesflatContainer className="themesflat-container ">
+                        <ThemesflatContainer>
                             <WrapHeading className="wrap-heading flat-slider">
                                 <Content className='content'>
                                     <SliderHeadingH2 className="heading">{props.item.title_1}</SliderHeadingH2>	
@@ -252,12 +250,6 @@ const SliderItem = props => {
                                     <SliderHeadingH2 className="heading">{props.item.title_3}</SliderHeadingH2>
                                     <SubHeading className="sub-heading">{props.item.description}
                                     </SubHeading>
-                                    <div className="flat-bt-slider flex style2">
-                                        <Link to="/explore-01" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Explore
-                                        </span></Link>
-                                        <Link to="/create-item" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Create
-                                        </span></Link>
-                                    </div>
                                 </Content>
                                 <Image className="image">
                                     <ImgBg className="img-bg" src={props.item.imgbg} alt="axies" />
