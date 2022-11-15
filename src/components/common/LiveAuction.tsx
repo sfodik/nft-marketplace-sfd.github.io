@@ -14,6 +14,9 @@ import { FlexRow, ThemesflatContainer, TitleH2 } from './styles';
 
 const LiveAuctions = styled.div`
     padding: 50px 0;
+    background: #14141f;
+    margin-bottom: 0 !important;
+    transition: all 0.3s ease-in-out;
     .swiper-button-next, .swiper-button-prev {
         position: absolute;
         bottom: -8px;
@@ -81,12 +84,10 @@ const LiveAuction = props => {
 
     return (
         <Fragment>
-            <LiveAuctions className="tf-section live-auctions">
-                <ThemesflatContainer className="themesflat-container ">
-                        <FlexRow className="heading-live-auctions">
-                            <TitleH2 className="tf-title pb-20">
-                                Live Auctions</TitleH2>
-                            <Link to="/explore-03" className="exp">EXPLORE MORE</Link>
+            <LiveAuctions>
+                <ThemesflatContainer>
+                        <FlexRow>
+                            <TitleH2>Live Auctions</TitleH2>
                         </FlexRow>
                         <Swiper
                             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -112,16 +113,8 @@ const LiveAuction = props => {
                         >
                                 {
                                     data.slice(0,7).map((item,index) => (
-                                        <SwiperSlide key={index}>
-                                                <div className="swiper-container show-shadow carousel auctions">
-                                                    <div className="swiper-wrapper">
-                                                        <div className="swiper-slide">
-                                                            <div className="slider-item">										
-                                                                <Card item={item} className="sc-card-product"/>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <SwiperSlide key={index}>							
+                                            <Card item={item}/>
                                         </SwiperSlide>
                                     ))
                                 }

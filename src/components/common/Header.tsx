@@ -230,9 +230,9 @@ const Header = () => {
                     <SiteLogo>
                         <img src={logodark} alt="" />
                     </SiteLogo>
-                    <div className="mobile-button" ref={btnToggle} onClick={menuToggle}><span></span></div>
+                    <div ref={btnToggle} onClick={menuToggle}><span></span></div>
                     <MainNav ref={menuLeft} >
-                        <Menu id="menu-primary-menu" className="menu">
+                        <Menu>
                             {
                                 menus.map((data,index) => (
                                     <MenuItem key={index} onClick={()=> handleOnClick(index)} className={`menu-item ${data.namesub ? 'menu-item-has-children' : '' } ${activeIndex === index ? 'active' : ''} ` }   >
@@ -257,7 +257,7 @@ const Header = () => {
                             }
                         </Menu>
                     </MainNav>
-                    <FlexCommonInner className="flat-search-btn flex">
+                    <FlexCommonInner>
                             <Link to="/wallet-connect"><span>Wallet connect
                             </span></Link>
                     </FlexCommonInner>

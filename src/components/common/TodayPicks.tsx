@@ -52,23 +52,22 @@ const TodayPicks = props => {
     return (
         <Fragment>
         <CardsPickSecteion>
-            <ThemesflatContainer className="themesflat-container">
-                    <TodayPicksHeaderWrap className="col-md-12">
-                        <TitleH2 className="tf-title">
+            <ThemesflatContainer>
+                    <TodayPicksHeaderWrap>
+                        <TitleH2>
                             Today's Picks
                         </TitleH2>
-                        <Link to="/explore-03" className="exp style2">EXPLORE MORE</Link>
                     </TodayPicksHeaderWrap>
                     <FlexWrapper>
                     {
                         data.slice(0,visible).map((item,index) => (
-                            <Card item={item} key={index} className={`sc-card-product ${item.feature ? 'comingsoon' : '' } `}/>
+                            <Card item={item} key={index} className={`${item.feature ? 'comingsoon' : '' } `}/>
                         ))
                     }
                     {
                         visible < data.length && 
-                        <ButtonWrap className="col-md-12 wrap-inner load-more text-center"> 
-                            <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
+                        <ButtonWrap> 
+                            <Link to="#" id="load-more" onClick={showMoreItems}><span>Load More</span></Link>
                         </ButtonWrap>
                     }
                     </FlexWrapper>

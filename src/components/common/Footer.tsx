@@ -20,15 +20,6 @@ const FooterInner = styled.div`
     p {
         color: white;
     }
-    .widget-menu {
-        padding-top: 18px;
-        &.style-1 {
-            padding-left: 30px;
-            @media screen and (max-width: 600px) {
-                padding-left: 0;
-            }
-        }
-    }
     .themesflat-container {
         display: flex;
         flex-wrap: wrap;
@@ -49,8 +40,18 @@ const FooterInner = styled.div`
             color: white;
         }
     }
-    .form-subcribe form {
+    form {
         position: relative;
+    }
+`;
+
+const WidgetMenu = styled.div`
+    padding-top: 18px;
+    &.style-1 {
+        padding-left: 30px;
+        @media screen and (max-width: 600px) {
+            padding-left: 0;
+        }
     }
 `;
 
@@ -267,17 +268,17 @@ const Footer = () => {
                 <ThemesflatContainer>
                     <ColLg3>
                         <div>
-                            <LogoFooter id="logo-footer">
+                            <LogoFooter>
                                 <Link to="/">
-                                    <img id="logo_footer" src={logodark} alt="nft-gaming" />
+                                    <img src={logodark} alt="nft-gaming" />
                                 </Link>
                             </LogoFooter>
                             <span>Lorem ipsum dolor sit amet,consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</span>
                         </div>
                     </ColLg3>
                     <ColLg2>
-                        <div className="widget widget-menu style-1">
-                            <Title className="title-widget">My Account</Title>
+                        <WidgetMenu className="style-1">
+                            <Title>My Account</Title>
                             <ul>
                                 {
                                     accountList.map((item,index) =>(
@@ -285,11 +286,11 @@ const Footer = () => {
                                     ))
                                 }
                             </ul>
-                        </div>
+                        </WidgetMenu>
                     </ColLg2>
                     <ColLg2>
-                        <div className="widget widget-menu style-2">
-                            <Title className="title-widget">Resources</Title>
+                        <WidgetMenu className="style-2">
+                            <Title>Resources</Title>
                             <ul>
                                 {
                                     resourcesList.map((item,index) =>(
@@ -297,11 +298,11 @@ const Footer = () => {
                                     ))
                                 }
                             </ul>
-                        </div>
+                        </WidgetMenu>
                     </ColLg2>
                     <ColLg2>
-                        <div className="widget widget-menu fl-st-3">
-                            <Title className="title-widget">Company</Title>
+                        <WidgetMenu className="fl-st-3">
+                            <Title>Company</Title>
                             <ul>
                                 {
                                     companyList.map((item,index) =>(
@@ -309,27 +310,16 @@ const Footer = () => {
                                     ))
                                 }
                             </ul>
-                        </div>
+                        </WidgetMenu>
                     </ColLg2>
                     <ColLg3>
-                        <div className="widget widget-subcribe">
-                            <Title className="title-widget">Subscribe Us</Title>
-                            <div className="form-subcribe">
-                                <form id="subscribe-form" action="#" method="GET" acceptCharset="utf-8" className="form-submit">
-                                    <FormInput name="email" className="email" required />
-                                    <FormInputBtn id="submit" ><IconSend></IconSend></FormInputBtn>
-                                </form>
-                            </div>
-                            <div className="widget-social style-1 mg-t32">
-                                <ul>
-                                    {
-                                        socialList.map((item,index) =>(
-                                            <li key={index}><Link to={item.link}><i className={item.icon}></i></Link></li>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
-                        </div>
+                        <WidgetMenu>
+                            <Title>Subscribe Us</Title>
+                            <form id="subscribe-form" action="#" method="GET" acceptCharset="utf-8">
+                                <FormInput name="email" className="email" required />
+                                <FormInputBtn id="submit" ><IconSend></IconSend></FormInputBtn>
+                            </form>
+                        </WidgetMenu>
                     </ColLg3>
                 </ThemesflatContainer>
             </FooterInner>
