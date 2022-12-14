@@ -49,6 +49,8 @@ const TodayPicks = props => {
         setVisible((prevValue) => prevValue + 4);
     }
     const [modalShow, setModalShow] = useState(false);
+
+    const TodayPicksData = data.slice(0,visible);
     return (
         <Fragment>
         <CardsPickSecteion>
@@ -60,8 +62,8 @@ const TodayPicks = props => {
                     </TodayPicksHeaderWrap>
                     <FlexWrapper>
                     {
-                        data.slice(0,visible).map((item,index) => (
-                            <Card item={item} key={index} className={`${item.feature ? 'comingsoon' : '' } `}/>
+                        TodayPicksData.map((item,index) => (
+                            <Card item={item} key={index}/>
                         ))
                     }
                     {

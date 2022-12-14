@@ -47,12 +47,6 @@ const FooterInner = styled.div`
 
 const WidgetMenu = styled.div`
     padding-top: 18px;
-    &.style-1 {
-        padding-left: 30px;
-        @media screen and (max-width: 600px) {
-            padding-left: 0;
-        }
-    }
 `;
 
 const FormInput = styled.input.attrs({ 
@@ -209,34 +203,6 @@ const Footer = () => {
             link: "/faq"
         },
     ]
-    const socialList = [
-        {
-            icon: "fab fa-twitter",
-            link: "#"
-        },
-        {
-            icon: "fab fa-facebook",
-            link: "#"
-        },
-        {
-            icon: "fab fa-telegram-plane",
-            link: "#"
-        },
-        {
-            icon: "fab fa-youtube",
-            link: "#"
-        },
-        {
-            icon: "icon-fl-tik-tok-2",
-            link: "#"
-        },
-        {
-            icon: "icon-fl-vt",
-            link: "#"
-        },
-        
-
-    ]
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -273,11 +239,11 @@ const Footer = () => {
                                     <img src={logodark} alt="nft-gaming" />
                                 </Link>
                             </LogoFooter>
-                            <span>Lorem ipsum dolor sit amet,consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</span>
+                            <span>Lorem ipsum dolor sit amet,consectetur<br/> adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</span>
                         </div>
                     </ColLg3>
                     <ColLg2>
-                        <WidgetMenu className="style-1">
+                        <WidgetMenu>
                             <Title>My Account</Title>
                             <ul>
                                 {
@@ -289,7 +255,7 @@ const Footer = () => {
                         </WidgetMenu>
                     </ColLg2>
                     <ColLg2>
-                        <WidgetMenu className="style-2">
+                        <WidgetMenu>
                             <Title>Resources</Title>
                             <ul>
                                 {
@@ -301,7 +267,7 @@ const Footer = () => {
                         </WidgetMenu>
                     </ColLg2>
                     <ColLg2>
-                        <WidgetMenu className="fl-st-3">
+                        <WidgetMenu>
                             <Title>Company</Title>
                             <ul>
                                 {
