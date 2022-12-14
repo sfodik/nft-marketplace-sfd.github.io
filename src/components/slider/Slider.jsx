@@ -48,6 +48,9 @@ const Shape = styled.div`
     border-radius: 50%;
     z-index: 1;
     position: absolute;
+    red {
+        background: red;
+    }
     &.item-w-16 {
         width: 16px;
         height: 16px;
@@ -225,27 +228,27 @@ Slider.propTypes = {
 
 const SliderItem = props => {
     return (
-        <FlatTitlePage className="flat-title-page" style={{backgroundImage: `url(${imgbg})`}}>
+        <FlatTitlePage style={{backgroundImage: `url(${imgbg})`}}>
         <BgrGradient className="gradient1" src={Shape1} alt="Axies" />
         <BgrGradient className="gradient2" src={Shape2} alt="Axies" />
         <BgrGradient className="gradient3" src={Shape3} alt="Axies" />
-        <Shape className="Shape item-w-16"></Shape>
-        <Shape className="Shape item-w-22"></Shape>
-        <Shape className="Shape item-w-32"></Shape>
-        <Shape className="Shape item-w-48"></Shape>
-        <Shape className="Shape style2 item-w-51"></Shape>
-        <Shape className="Shape style2 item-w-51 position2"></Shape>
-        <Shape className="Shape item-w-68"></Shape>
+        <Shape red className="item-w-16"></Shape>
+        <Shape className="item-w-22"></Shape>
+        <Shape className="item-w-32"></Shape>
+        <Shape className="item-w-48"></Shape>
+        <Shape className="style2 item-w-51"></Shape>
+        <Shape className="style2 item-w-51 position2"></Shape>
+        <Shape className="item-w-68"></Shape>
         <Overlay></Overlay>
         <div className="swiper-container mainslider home">
             <div className="swiper-wrapper">
                 <div className="swiper-slide">
                     <div className="slider-item">	
                         <ThemesflatContainer>
-                            <WrapHeading className="wrap-heading flat-slider">
+                            <WrapHeading>
                                 <Content className='content'>
                                     <SliderHeadingH2 className="heading">{props.item.title_1}</SliderHeadingH2>	
-                                    <SliderHeadingH2 className="heading mb-style"><TfText className="tf-text s1">{props.item.title_2}</TfText>                                          
+                                    <SliderHeadingH2 className="heading"><TfText className="tf-text s1">{props.item.title_2}</TfText>                                          
                                     </SliderHeadingH2>
                                     <SliderHeadingH2 className="heading">{props.item.title_3}</SliderHeadingH2>
                                     <SubHeading className="sub-heading">{props.item.description}

@@ -47,8 +47,7 @@ const ThemesflatContainer = styled.div`
 
 const FlexRow = styled.div`
     animation: move5 10s infinite linear;
-    position: absolute;
-    z-index: -1;
+    z-index: 1;
     right: 0%;
     top: 14%;
     max-width: 100%;
